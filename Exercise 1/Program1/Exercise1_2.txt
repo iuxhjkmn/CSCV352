@@ -1,0 +1,42 @@
+student@EC2AMAZ-O8AHUB0:/mnt/c/Users/Administrator/Desktop/Exercise 1/Program1$ gdb Program1
+GNU gdb (Debian 8.3.1-1) 8.3.1
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+--Type <RET> for more, q to quit, c to continue without paging--list main
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from Program1...
+(gdb) disassemble main
+Dump of assembler code for function main:
+   0x0000000000001145 <+0>:     push   %rbp
+   0x0000000000001146 <+1>:     mov    %rsp,%rbp
+   0x0000000000001149 <+4>:     sub    $0x20,%rsp
+   0x000000000000114d <+8>:     mov    %edi,-0x14(%rbp)
+   0x0000000000001150 <+11>:    mov    %rsi,-0x20(%rbp)
+   0x0000000000001154 <+15>:    lea    0xead(%rip),%rax        # 0x2008
+   0x000000000000115b <+22>:    mov    %rax,-0x8(%rbp)
+   0x000000000000115f <+26>:    lea    0xea6(%rip),%rdi        # 0x200c
+   0x0000000000001166 <+33>:    callq  0x1030 <puts@plt>
+   0x000000000000116b <+38>:    lea    0xeb8(%rip),%rdi        # 0x202a
+--Type <RET> for more, q to quit, c to continue without paging--disassemble_start
+   0x0000000000001172 <+45>:    callq  0x1030 <puts@plt>
+   0x0000000000001177 <+50>:    lea    0xec2(%rip),%rdi        # 0x2040
+   0x000000000000117e <+57>:    callq  0x1030 <puts@plt>
+   0x0000000000001183 <+62>:    mov    -0x8(%rbp),%rax
+   0x0000000000001187 <+66>:    mov    %rax,%rsi
+   0x000000000000118a <+69>:    lea    0xed7(%rip),%rdi        # 0x2068
+   0x0000000000001191 <+76>:    mov    $0x0,%eax
+   0x0000000000001196 <+81>:    callq  0x1040 <printf@plt>
+   0x000000000000119b <+86>:    mov    $0x0,%eax
+   0x00000000000011a0 <+91>:    leaveq 
+   0x00000000000011a1 <+92>:    retq   
