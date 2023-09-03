@@ -1,0 +1,154 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		5146AF042A9FD04C006E30C8 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		5146AF052A9FD04C006E30C8 /* Exercise1_1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Exercise1_1.txt; sourceTree = "<group>"; };
+		5146AF062A9FD04C006E30C8 /* Exercise1_2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Exercise1_2.txt; sourceTree = "<group>"; };
+		5146AF072A9FD04C006E30C8 /* Exercise1_3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Exercise1_3.txt; sourceTree = "<group>"; };
+		5146AF082A9FD04C006E30C8 /* Exercise1_4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Exercise1_4.txt; sourceTree = "<group>"; };
+		5146AF092A9FD04C006E30C8 /* Program1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Program1.c; sourceTree = "<group>"; };
+		5146AF0A2A9FD04C006E30C8 /* Program1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Program1; sourceTree = "<group>"; };
+		5146AF0B2A9FD04C006E30C8 /* Program1.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = Program1.map; sourceTree = "<group>"; };
+		5146AF0C2A9FD04C006E30C8 /* .vscode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .vscode; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		5146AEFE2A9FD04C006E30C8 = {
+			isa = PBXGroup;
+			children = (
+				5146AF042A9FD04C006E30C8 /* makefile */,
+				5146AF052A9FD04C006E30C8 /* Exercise1_1.txt */,
+				5146AF062A9FD04C006E30C8 /* Exercise1_2.txt */,
+				5146AF072A9FD04C006E30C8 /* Exercise1_3.txt */,
+				5146AF082A9FD04C006E30C8 /* Exercise1_4.txt */,
+				5146AF092A9FD04C006E30C8 /* Program1.c */,
+				5146AF0A2A9FD04C006E30C8 /* Program1 */,
+				5146AF0B2A9FD04C006E30C8 /* Program1.map */,
+				5146AF0C2A9FD04C006E30C8 /* .vscode */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		5146AF032A9FD04C006E30C8 /* Program1 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 5146AF0D2A9FD04C006E30C8 /* Build configuration list for PBXLegacyTarget "Program1" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/kanggg/Documents/GitHub/CSCV352/Exercise 1/Program1";
+			dependencies = (
+			);
+			name = Program1;
+			passBuildSettingsInEnvironment = 1;
+			productName = Program1;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		5146AEFF2A9FD04C006E30C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+			};
+			buildConfigurationList = 5146AF022A9FD04C006E30C8 /* Build configuration list for PBXProject "Program1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5146AEFE2A9FD04C006E30C8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5146AF032A9FD04C006E30C8 /* Program1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		5146AF002A9FD04C006E30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		5146AF012A9FD04C006E30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		5146AF0E2A9FD04C006E30C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Program1;
+			};
+			name = Debug;
+		};
+		5146AF0F2A9FD04C006E30C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Program1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5146AF022A9FD04C006E30C8 /* Build configuration list for PBXProject "Program1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5146AF002A9FD04C006E30C8 /* Debug */,
+				5146AF012A9FD04C006E30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5146AF0D2A9FD04C006E30C8 /* Build configuration list for PBXLegacyTarget "Program1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5146AF0E2A9FD04C006E30C8 /* Debug */,
+				5146AF0F2A9FD04C006E30C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5146AEFF2A9FD04C006E30C8 /* Project object */;
+}
