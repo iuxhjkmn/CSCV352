@@ -1,6 +1,17 @@
 /*****************************************************
  *
  *  CSCV352 - Exercise4_1.c
+ * Exercise4_1
+Write the function int strend(s, t), which returns 1 if the string t occurs at the end of the string s, 
+and returns zero otherwise. Implement the function using the provided Exercise4_1.c file. 
+The provided program tests your function by first prompting the user for the string to search and then 
+promoting the user for the string to search for. The program calls your strend() with the user’s input and 
+displays a message indicating that the string was found or was not found. The strend() function must not 
+print any information to the console. The only output from this program should be from the provided program.
+Take a screenshot showing the terminal after the program runs. The screenshot should show the output of your program. 
+Name the screenshot either Exercise4_1.jpg or Exercise4_1.png, depending on the image type of the screenshot file.
+When complete, turn in your source code file using the filename Exercise4_1.c and your screenshot file named according 
+to the above instruction.
  *
  *  Sample Solution
  *
@@ -76,6 +87,18 @@ int main(int argc, char *argv[])
 int strend(char *s, char *t)
 {
 	int retVal = 0;
+	int i = 0;
+	while (i<strlen(t))
+	{
+		if (strlen(t) > strlen(s))
+		{
+			return retVal;
+		}
+		else
+		{
+
+		}
+	}
     
     /* YOUR IMPLMENTATION GOES HERE */
 
