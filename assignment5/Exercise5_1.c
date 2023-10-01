@@ -18,20 +18,22 @@ and your screenshot file named according to the above instruction.
 #include <stdlib.h>
 #include <ctype.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-    FILE *in, *out;// create a in and out file variable for pointer;
-    int ch;//character in in file
-    long offset;
-
-    in = fopen("hh.txt", "r+");//open the infile in read and write mode
-    out = fopen("hhh.txt", "w" );//open the file in write mode because we are wirte the ch in
-
+    if (argc != 3){//check if we pass the right number of arguments
+        return 2;
+    }
+    // create a in and out file variable for pointer;
+    FILE *in = fopen(argv[1], "r");//open the infile in read mode
+    FILE *out = fopen(argv[2], "w" );//open the file in write mode because we are wirte the ch in
     if ( in == NULL || out == NULL )//we want to make sure the files are valid
     {
         printf("error:  unable to open file\n");//print out error message
         exit(1);//exit the program if no valid file
     }
+
+    int ch;//character in in file
+    long offset;
 
     offset = ftell(in);//define the last location in the file 
     while (1)//while we are not done getting chs
@@ -47,7 +49,7 @@ int main()
         }
         else if (isupper(ch))//see if ch is upper 
         {
-            fputc(tolower(ch), out );//write the ch to outfile
+            fputc(ch, out );//write the ch to outfile without change
         }
         else if (islower(ch))//see if ch is lower
         {

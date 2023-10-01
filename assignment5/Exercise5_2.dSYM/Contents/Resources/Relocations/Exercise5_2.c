@@ -23,40 +23,52 @@ to the above instruction.
 
 int main(int argc, char *argv[])
 {
-      if (argc != 4)
-      {
-      //check if we pass the right number of arguments
-            return 1;
+    if (argc != 4)
+    {
+        printf("Usage: %s <filename> <starting_offset> <max_chars_to_print>\n", argv[0]);
+        return 1;
+    }
 
-      }
-      char *extraChars = NULL;
-      long startingOffset;
-      if((startingOffset = strtol(argv[2], &extraChars, 10) ==0 && argv[2][0] != '0') || *extraChars != 0)
-      {
-            printf("Invalid input, exiting program");
-            return 1;
-      }
+    char *endPtr;
+    long startingOffset = strtol(argv[2], &endPtr, 10);
+    if (*endPtr != '\0' || startingOffset < 0)
+    {
+        printf("Invalid starting offset, exiting program\n");
+        return 2;
+    }
 
-      FILE *in = fopen(argv[1], "rb");//open the infile in read binary mode
-      if ( in == NULL)//we want to make sure the files are valid
-      {
-            printf("error:  unable to open file\n");//print out error message
-            return 1;//exit the program if no valid file
-      }
-      long last = ftell(in);//file length
-      long count;
-      char ch;
-      long maxmum = strtol(argv[3], &extraChars, 10);
-      fseek(in, startingOffset, SEEK_SET);
-      for (count = startingOffset; count <= maxmum; count++ )
-      {
-            fseek(in, +count, SEEK_SET);//from start point to end point
-            ch = getc(in);
-            if (ch != EOF)
-                  putchar(ch);
-      }
-     
-      putchar('\n');
-      fclose(in);
+    long maxCharsToPrint = strtol(argv[3], &endPtr, 10);
+    if (*endPtr != '\0' || maxCharsToPrint <= 0)
+    {
+        printf("Invalid max_chars_to_print value, exiting program\n");
+        return 3;
+    }
 
+    FILE *in = fopen(argv[1], "r");
+    if (in == NULL)
+    {
+        printf("Error: Unable to open file %s\n", argv[1]);
+        return 4;
+    }
+
+    fseek(in, startingOffset, SEEK_SET);
+    char *buffer = (char *)malloc(maxCharsToPrint + 1); // +1 for null terminator
+    if (buffer == NULL)
+    {
+        printf("Memory allocation failed, exiting program\n");
+        fclose(in);
+        return 5;
+    }
+
+    size_t bytesRead = fread(buffer, 1, maxCharsToPrint, in);
+    buffer[bytesRead] = '\0'; // Null-terminate the string
+
+    printf("%s", buffer);
+
+    free(buffer);
+    
+
+    fclose(in);
+
+    return 0;
 }

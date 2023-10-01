@@ -1,0 +1,4 @@
+/*Exercise5_1
+Write a file case conversion program that accepts the name of two files as command line parameters. 
+The first parameter is the source file, and the second parameter is the output file. 
+
